@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JNHS Attendance Scanner</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Include Tesseract.js from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+    <!-- Include Firebase App and Database SDKs (Compat version for simple script tags) -->
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-database-compat.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>JNHS ATTENDANCE SYSTEM</h1>
+            <p class="subtitle">Position 12-digit LRN inside the camera view</p>
+        </header>
+
+        <main class="scanner-card">
+            <div class="video-container">
+                <video id="camera-stream" autoplay playsinline></video>
+                <div class="scan-overlay"></div>
+            </div>
+
+            <div class="controls">
+                <button id="scan-btn" class="btn btn-primary">Scan ID</button>
+                <div id="status-message" class="status-idle">Ready to scan...</div>
+            </div>
+
+            <!-- Result Card hidden by default -->
+            <div id="result-card" class="result-card hidden">
+                <h3>Student Verified</h3>
+                <div class="info-grid">
+                    <div class="info-item"><span class="label">Name:</span> <span id="res-name" class="val"></span></div>
+                    <div class="info-item"><span class="label">LRN:</span> <span id="res-lrn" class="val"></span></div>
+                    <div class="info-item"><span class="label">Class:</span> <span id="res-class" class="val"></span></div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <a href="admin.html" class="nav-link">Go to Admin Dashboard →</a>
+        </footer>
+    </div>
+
+    <script src="students.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
