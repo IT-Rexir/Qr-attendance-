@@ -1,10 +1,12 @@
 {
-  "name": "ICT",
-  "short_name": "BISAKOL",
-  "start_url": "./",
+  "name": "ICT BISAKOL",
+  "short_name": "ICT BISAKOL",
+  "description": "Real-Time ICT-TDA Student Attendance ",
+  "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#000000",
+  "background_color": "#020617",
+  "theme_color": "#020617",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "icon-192.png",
