@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="manifest" href="manifest.json">
     <title>ICT TDA - Attendance Home Made</title>
     <!-- Tailwind CSS for utility styles -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -15,6 +14,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <!-- Canvas Confetti for celebrating milestones -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <link rel="manifest" href="manifest.json">
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap');
@@ -1373,9 +1373,11 @@
         function escapeHtml(str) {
             return str.replace(/[&<>'"]/g, match => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[match] || match));
         }
+        
         if ("serviceWorker" in navigator) {
-  navigator.serviceWorker.register("sw.js");
+        navigator.serviceWorker.register("sw.js");
         }
+        
     </script>
 </body>
 </html>
