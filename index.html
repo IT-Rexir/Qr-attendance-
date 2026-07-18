@@ -731,7 +731,7 @@
                 else if (curHour >= 17) welcomePhrase = "Good Evening";
 
                 const firstName = name.split(' ')[0] || name;
-                const narration = new SpeechSynthesisUtterance(`${welcomePhrase}, ${firstName}. Access granted.`);
+                const narration = new SpeechSynthesisUtterance(`${welcomePhrase}, ${firstName}. ICT Bisaya.`);
                 narration.rate = 1.05;
                 narration.pitch = 1.05;
                 window.speechSynthesis.speak(narration);
